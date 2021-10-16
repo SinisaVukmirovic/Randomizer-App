@@ -28,33 +28,34 @@ body {
     position: absolute;
     width: 120%;
     height: 100%;
-    left: -30%;
-    top: -5%;
+    left: -20%;
+    bottom: 0;
     background-image: url("../imgs/mist-1.png");
-    animation: left-right 8s ease-in-out alternate-reverse infinite;
+    animation: mist-1 6s ease-in-out alternate-reverse infinite;
+    /* filter: saturate(200%); */
 
 }
 .mist-2 {
     position: absolute;
     width: 120%;
-    height: 110%;
+    height: 100%;
 
-    left: -10%;
+    right: 0;
     top: -10%;
 
     background-image: url("../imgs/mist-2.png");
-    animation: up-down 5s ease-in-out alternate-reverse infinite;
+    animation: mist-2 10s ease-in-out alternate-reverse infinite;
 }
 
-@keyframes left-right {
+@keyframes mist-1 {
     to {
         left: 0;
-        top: 0;
+        /* top: 0; */
     }
 }
-@keyframes up-down {
+@keyframes mist-2 {
     to {
-        left: 0;
-        top: 0;
+        right: -20%;
+        /* top: 0; */
     }
 }
