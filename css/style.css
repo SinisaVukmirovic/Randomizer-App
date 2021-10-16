@@ -17,3 +17,44 @@ body {
     background-position: center;
 }
 
+.mist {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20rem;
+    overflow: hidden;
+}
+.mist-1 {
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    left: -30%;
+    top: -5%;
+    background-image: url("../imgs/mist-1.png");
+    animation: left-right 8s ease-in-out alternate-reverse infinite;
+
+}
+.mist-2 {
+    position: absolute;
+    width: 120%;
+    height: 110%;
+
+    left: -10%;
+    top: -10%;
+
+    background-image: url("../imgs/mist-2.png");
+    animation: up-down 5s ease-in-out alternate-reverse infinite;
+}
+
+@keyframes left-right {
+    to {
+        left: 0;
+        top: 0;
+    }
+}
+@keyframes up-down {
+    to {
+        left: 0;
+        top: 0;
+    }
+}
