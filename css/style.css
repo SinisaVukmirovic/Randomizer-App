@@ -10,7 +10,7 @@ body {
     background: #030408;
     height: 100vh;
     overflow: hidden;
-    background-image: url("../imgs/bg-1.jpg");
+    background-image: url("../assets/bg.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -109,7 +109,7 @@ h1 {
     width: 120%;
     height: 100%;
     left: -20%;
-    background-image: url("../imgs/mist-1.png");
+    background-image: url("../assets/mist-1.png");
     animation: mist-1 7s ease-in-out alternate-reverse infinite;
     /* filter: saturate(200%); */
 
@@ -120,10 +120,9 @@ h1 {
     height: 100%;
 
     right: -20%;
-    top: -10%;
 
-    background-image: url("../imgs/mist-2.png");
-    animation: mist-2 12s ease-in-out alternate-reverse infinite;
+    background-image: url("../assets/mist-2.png");
+    animation: mist-2 8s ease-in-out alternate-reverse infinite;
 }
 
 @keyframes mist-1 {
