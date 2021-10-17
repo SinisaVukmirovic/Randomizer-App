@@ -17,10 +17,11 @@ body {
 
 h1 {
     color: #faa;
-    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em red, 
-                                0 0 0.5em red, 
-                                0 0 0.1em red, 
-                                0 10px 3px #000;
+    text-shadow: 0 -40px 100px, 
+                 0 0 2px, 0 0 1em red, 
+                 0 0 .5em red, 
+                 0 0 .1em red, 
+                 0 10px 3px #000;
     text-align: center;
     text-transform: uppercase;
     font-family: "Gugi", impact, sans-serif;
@@ -38,32 +39,6 @@ h1 {
         bottom: -2rem;
         transform: rotate(15deg);
     }
-    /* @keyframes blinking {
-        0% {
-            color: #fff;
-        }
-        50% {
-            color: #fff;
-        }
-        50.2% {
-            color: #333;
-        }
-        50.4% {
-            color: #fff;
-        }
-        52% {
-            color: #333;
-        }
-        53% {
-            color: #fff;
-        }
-        80% {
-            color: #333;
-        }
-        81% {
-            color: #fff;
-        }
-    } */
     @keyframes blinking {
         78% {
           color: inherit;
@@ -104,43 +79,30 @@ h1 {
     height: 20rem;
     overflow: hidden;
 }
-.mist-1 {
-    position: absolute;
-    width: 120%;
-    height: 100%;
-    left: -20%;
-    background-image: url("../assets/mist-1.png");
-    animation: mist-1 7s ease-in-out alternate-reverse infinite;
-    /* filter: saturate(200%); */
+    .mist-1 {
+        position: absolute;
+        width: 120%;
+        height: 100%;
+        left: -20%;
+        background-image: url("../assets/mist-1.png");
+        animation: mist-1 7s ease-in-out alternate-reverse infinite;
 
-}
-.mist-2 {
-    position: absolute;
-    width: 120%;
-    height: 100%;
-
-    right: -20%;
-
-    background-image: url("../assets/mist-2.png");
-    animation: mist-2 8s ease-in-out alternate-reverse infinite;
-}
-
+    }
+    .mist-2 {
+        position: absolute;
+        width: 120%;
+        height: 100%;
+        right: -20%;
+        background-image: url("../assets/mist-2.png");
+        animation: mist-2 8s ease-in-out alternate-reverse infinite;
+    }
 @keyframes mist-1 {
     to {
         left: 0;
-        /* top: 0; */
     }
 }
 @keyframes mist-2 {
     to {
         right: 0;
-        /* top: 0; */
     }
-}
-
-.impact {
-    font-family: Impact, sans-serif;
-}
-.gugi {
-    font-family: 'Gugi', cursive;
 }
