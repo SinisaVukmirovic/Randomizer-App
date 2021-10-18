@@ -106,3 +106,8 @@ h1 {
         right: 0;
     }
 }
+
+#tags {
+  font-size: 2rem;
+  color: #fff;
+}
