@@ -1,4 +1,4 @@
-const inputElem = document.querySelector('#inputElem');
+
 const addBtn = document.querySelector('#addBtn');
 const itemsElem = document.querySelector('#items');
 
@@ -6,8 +6,11 @@ const items = [];
 
 const logInp = (e) => {
     e.preventDefault();
-    // console.log(inputElem.value);
+    const inputElem = document.querySelector('#inputElem');
+
+    if (inputElem.value == '') return;
     items.push(inputElem.value);
+    
     inputElem.value = '';
 
     logUnique(items);
