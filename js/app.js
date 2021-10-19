@@ -1,6 +1,6 @@
 const inputElem = document.querySelector('#inputElem');
 const addBtn = document.querySelector('#addBtn');
-const tagsElem = document.querySelector('#tags');
+const itemsElem = document.querySelector('#items');
 
 const items = [];
 
@@ -17,7 +17,7 @@ const logUnique = (items) => {
     const uniqueItems = new Set(items);
     console.log(uniqueItems);
     
-    tagsElem.innerHTML = '';
+    itemsElem.innerHTML = '';
     createElems(uniqueItems);
 }
 
@@ -25,10 +25,10 @@ const createElems = (items) => {
     items.forEach(item => {
 
         const itemElem = document.createElement('span');
-        // itemElem.classList.add('tag');
+        itemElem.classList.add('item');
         itemElem.innerText = item;
 
-        tagsElem.appendChild(itemElem);
+        itemsElem.appendChild(itemElem);
     });
 }
 

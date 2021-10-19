@@ -38,6 +38,7 @@ h1 {
         display: inline-block;
         bottom: -2rem;
         transform: rotate(15deg);
+        opacity: .85;
     }
     @keyframes blinking {
         78% {
@@ -95,22 +96,32 @@ h1 {
         right: -20%;
         background-image: url("../assets/mist-2.png");
         animation: mist-2 8s ease-in-out alternate-reverse infinite;
+        filter: brightness(150%);
     }
 @keyframes mist-1 {
     to {
         left: 0;
+        filter: brightness(150%);
     }
 }
 @keyframes mist-2 {
     to {
         right: 0;
+        filter: brightness(100%);
     }
 }
 
-#tags {
-  font-size: 2rem;
+#items {
+  font-family: "Gugi", impact, sans-serif;
+  font-size: 1.25rem;
   color: #fff;
   padding: 1rem;
   border: 1px solid #fff;
   background-color: rgba(255, 255, 255, .2);
+}
+
+.item {
+  padding: .25rem .75rem;
+  margin: .25rem;
+  border: 1px solid red;
 }
