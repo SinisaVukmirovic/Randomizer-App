@@ -1,6 +1,8 @@
+const app = document.querySelector('.app');
 
-const addBtn = document.querySelector('#addBtn');
-const itemsElem = document.querySelector('#items');
+const addBtn = app.querySelector('#addBtn');
+const itemsElem = app.querySelector('#items');
+const startBtn = app.querySelector('#startBtn');
 
 const items = [];
 
@@ -18,7 +20,8 @@ const logInp = (e) => {
 
 const logUnique = (items) => {
     const uniqueItems = new Set(items);
-    console.log(uniqueItems);
+    // Set uses size not lenght
+    if (uniqueItems.size > 1) startBtn.disabled = false;
     
     itemsElem.innerHTML = '';
     createElems(uniqueItems);
