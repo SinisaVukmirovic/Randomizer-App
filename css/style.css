@@ -112,16 +112,18 @@ h1 {
 }
 
 input[type='text'] {
+  /* text-transform: uppercase; */
+  font-size: 1rem;
   padding: .5rem 1rem;
   margin: .5rem 0;  
-  /* border: none; */
+  /* border: 1px solid #aaa; */
   outline: none;
   /* background: transparent; */
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, .3);
   color: #fff;
 }
   input[type='text']::placeholder {
-    color: #ddd;
+    color: #ccc;
   }
 
 button, input[type='submit'] {
@@ -156,16 +158,17 @@ button, input[type='submit'] {
 
 #items {
   width: 100%;
-  max-height: 100%;
+  height: 70rem;
+  /* max-height: 100%; */
   font-family: "Gugi", impact, sans-serif;
   font-size: 1.25rem;
   color: #fff;
+  text-transform: capitalize;
   border: 1px solid #fff;
   margin: 1rem 0;
   /* background-color: rgba(255, 255, 255, .2); */
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  align-items: flex-start;
   flex-wrap: wrap;
   overflow-y: scroll;
 }
@@ -175,6 +178,9 @@ button, input[type='submit'] {
   margin: .25rem;
   border: 1px solid red;
 }
+  .item.js-highlight {
+    background-color: yellow;
+  }
 
 /* #startBtn {
   display: none;

@@ -39,3 +39,43 @@ const createElems = (items) => {
 }
 
 addBtn.addEventListener('click', logInp);
+
+const randomSelect = () => {
+    const timesToHighlight = 40;
+
+    const interval = setInterval(() => {
+        const randomItem = pickRandomItem();
+
+        highlightItem(randomItem);
+
+        setTimeout(() => {
+            unHighlightItem(randomItem);
+        }, 200);
+    }, 200);
+
+    setTimeout(() => {
+        clearInterval(interval);
+
+        setTimeout(() => {
+            const randomItem = pickRandomItem();
+
+            highlightItem(randomItem);
+        }, 200);
+    }, timesToHighlight * 100);
+}
+
+const pickRandomItem = () => {
+    const items = document.querySelectorAll('.item');
+
+    return items[Math.floor(Math.random() * items.length)];
+}
+
+const highlightItem = (item) => {
+    item.classList.add('js-highlight');
+}
+
+const unHighlightItem = (item) => {
+    item.classList.remove('js-highlight');
+}
+
+startBtn.addEventListener('click', randomSelect);
