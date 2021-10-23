@@ -1,7 +1,7 @@
 const app = document.querySelector('.app');
 
-const addBtn = app.querySelector('#addBtn');
 const itemsElem = app.querySelector('#items');
+const addBtn = app.querySelector('#addBtn');
 const startBtn = app.querySelector('#startBtn');
 const resetBtn = app.querySelector('#resetBtn');
 
@@ -39,7 +39,8 @@ const createItemElems = (items) => {
 }
 
 const randomSelect = () => {
-    const timesToHighlight = 40;
+    resetBtn.disabled = true;
+    const timesToHighlight = (items.length * 2) ;
 
     const interval = setInterval(() => {
         const randomItem = pickRandomItem();
@@ -48,8 +49,8 @@ const randomSelect = () => {
 
         setTimeout(() => {
             unHighlightItem(randomItem);
-        }, 200);
-    }, 200);
+        }, 150);
+    }, 150);
 
     setTimeout(() => {
         clearInterval(interval);
@@ -58,12 +59,16 @@ const randomSelect = () => {
             const randomItem = pickRandomItem();
 
             highlightItem(randomItem);
-        }, 200);
-    }, timesToHighlight * 100);
+            resetBtn.disabled = false;
+        }, 150);
+        
+
+    }, timesToHighlight * 150);
 }
 
 const pickRandomItem = () => {
     startBtn.disabled = true;
+    resetBtn.disabled = true;
     const items = itemsElem.querySelectorAll('.item');
 
     return items[Math.floor(Math.random() * items.length)];

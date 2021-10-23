@@ -86,8 +86,7 @@ h1 {
         height: 100%;
         left: -20%;
         background-image: url("../assets/mist-1.png");
-        animation: mist-1 7s ease-in-out alternate-reverse infinite;
-
+        animation: mist-1 8s ease-in-out alternate-reverse infinite;
     }
     .mist-2 {
         position: absolute;
@@ -95,7 +94,7 @@ h1 {
         height: 100%;
         right: -20%;
         background-image: url("../assets/mist-2.png");
-        animation: mist-2 8s ease-in-out alternate-reverse infinite;
+        animation: mist-2 9s ease-in-out alternate-reverse infinite;
         filter: brightness(200%);
     }
 @keyframes mist-1 {
@@ -150,12 +149,12 @@ button, input[type='submit'] {
   flex-direction: column;
   width: 50%;
   /* height: 50vh; */
-  background-color: rgba(255, 255, 255, .2);
+  background-color: rgba(255, 255, 255, .1);
   /* max-height: 20vh; */
   max-height: 50vh;
   margin: 5rem 20% 0 auto;
   padding: 1rem;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 #items {
@@ -166,23 +165,34 @@ button, input[type='submit'] {
   font-size: 1.25rem;
   color: #fff;
   text-transform: capitalize;
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
   margin: 1rem 0;
   /* background-color: rgba(255, 255, 255, .2); */
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  overflow-y: scroll;
+  /* overflow-y: auto; */
+  /* overflow-y: scroll; */
 }
 
 .item {
   padding: .25rem .75rem;
   margin: .25rem;
-  border: 1px solid red;
+  border: 2px solid red;
+  /* transition: transform 3s linear; */
 }
   .item.js-highlight {
-    background-color: yellow;
+    background-color: red;
+    animation: scalePick 2s linear forwards;
+  }
+
+  @keyframes scalePick {
+    to {
+      position: relative;
+      z-index: 1111;
+      transform: scale(2);
+    }
   }
 
 /* #startBtn {
@@ -190,5 +200,5 @@ button, input[type='submit'] {
 } */
 
 #resetBtn {
-  background-color: #222;
+  background-color: #111;
 }
