@@ -188,3 +188,7 @@ button, input[type='submit'] {
 /* #startBtn {
   display: none;
 } */
+
+#resetBtn {
+  background-color: #222;
+}
