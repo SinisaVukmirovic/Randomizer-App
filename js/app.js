@@ -3,10 +3,11 @@ const app = document.querySelector('.app');
 const addBtn = app.querySelector('#addBtn');
 const itemsElem = app.querySelector('#items');
 const startBtn = app.querySelector('#startBtn');
+const resetBtn = app.querySelector('#resetBtn');
 
-const items = [];
+let items = [];
 
-const logInp = (e) => {
+const addItem = (e) => {
     e.preventDefault();
     const inputElem = document.querySelector('#inputElem');
 
@@ -15,21 +16,20 @@ const logInp = (e) => {
     
     inputElem.value = '';
 
-    logUnique(items);
+    makeItemsUnique(items);
 }
 
-const logUnique = (items) => {
+const makeItemsUnique = (items) => {
     const uniqueItems = new Set(items);
     // Set uses size not lenght
     if (uniqueItems.size > 1) startBtn.disabled = false;
     
     itemsElem.innerHTML = '';
-    createElems(uniqueItems);
+    createItemElems(uniqueItems);
 }
 
-const createElems = (items) => {
+const createItemElems = (items) => {
     items.forEach(item => {
-
         const itemElem = document.createElement('span');
         itemElem.classList.add('item');
         itemElem.innerText = item;
@@ -37,8 +37,6 @@ const createElems = (items) => {
         itemsElem.appendChild(itemElem);
     });
 }
-
-addBtn.addEventListener('click', logInp);
 
 const randomSelect = () => {
     const timesToHighlight = 40;
@@ -65,7 +63,8 @@ const randomSelect = () => {
 }
 
 const pickRandomItem = () => {
-    const items = document.querySelectorAll('.item');
+    startBtn.disabled = true;
+    const items = itemsElem.querySelectorAll('.item');
 
     return items[Math.floor(Math.random() * items.length)];
 }
@@ -78,4 +77,13 @@ const unHighlightItem = (item) => {
     item.classList.remove('js-highlight');
 }
 
+const resetApp = () => {
+    items = [];
+    itemsElem.innerHTML = '';
+}
+
+addBtn.addEventListener('click', addItem);
+
 startBtn.addEventListener('click', randomSelect);
+
+resetBtn.addEventListener('click', resetApp);
