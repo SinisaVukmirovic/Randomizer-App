@@ -13,6 +13,7 @@ body {
     background-image: url("../assets/bg.jpg");
     background-size: cover;
     background-position: center;
+    font-family: "Gugi", impact, sans-serif;
 }
 
 h1 {
@@ -24,7 +25,6 @@ h1 {
                  0 10px 3px #000;
     text-align: center;
     text-transform: uppercase;
-    font-family: "Gugi", impact, sans-serif;
     font-size: 7rem;
     letter-spacing: 10px;
     padding-top: 5rem;
@@ -72,6 +72,40 @@ h1 {
           text-shadow: inherit;
         }
       }
+
+.speech {
+  position: absolute;
+  left: 10%;
+  top: 35%;
+  color: #ddd;
+  font-size: 1.25rem;
+  font-style: italic;
+  opacity: 0;
+  animation: fadeIn 250ms ease-in forwards 3s;
+}
+  .speech .red {
+    color: red;
+    font-size: 1.5rem;
+    font-style: normal;
+  }
+  .speech .delayed {
+    opacity: 0;
+    animation: fadeIn 250ms ease-in forwards 6s;
+  }
+  .yesBtn {
+    opacity: 0;
+    animation: fadeIn 250ms ease-in forwards 10s;
+    position: absolute;
+    right: 0;
+    margin-top: 1rem;
+    padding: .5rem 1rem;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
 
 .mist {
     position: absolute;
@@ -144,7 +178,7 @@ button, input[type='submit'] {
     transform: scale(.98);
   }
   button:disabled {
-    background-color: inherit;
+    background-color: rgba(255, 0, 0, .3);
     cursor: not-allowed;
   }
 
@@ -163,6 +197,8 @@ button, input[type='submit'] {
   margin: 5rem 20% 0 auto;
   padding: 1rem;
   /* border: 1px solid red; */
+  transform: scale(.05);
+  transform-origin: center;
 }
   .app form,
   .app .controls {
