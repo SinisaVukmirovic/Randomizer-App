@@ -113,10 +113,11 @@ h1 {
 input[type='text'] {
   /* text-transform: uppercase; */
   font-size: 1rem;
-  padding: .5rem 1rem;
-  margin: .5rem 0;  
+  padding: .5rem;
+  margin: .5rem .25rem;  
   /* border: 1px solid #aaa; */
   outline: none;
+  border: 1px solid #777;
   /* background: transparent; */
   background-color: rgba(0, 0, 0, .3);
   color: #fff;
@@ -126,15 +127,22 @@ input[type='text'] {
   }
 
 button, input[type='submit'] {
-  /* outline: none; */
+  outline: none;
   /* border: none; */
+  border: 1px solid #777;
+
   background-color: red;
   color: #eee;
-  padding: .5rem 1rem;
-  margin: .5rem 0;
+  font-weight: bold;
+  padding: .5rem 0;
+  margin: .5rem .25rem;
   text-transform: uppercase;
   cursor: pointer;
 }
+  button:active,
+  input[type='submit']:active {
+    transform: scale(.98);
+  }
   button:disabled {
     background-color: inherit;
     cursor: not-allowed;
@@ -156,6 +164,25 @@ button, input[type='submit'] {
   padding: 1rem;
   /* border: 1px solid red; */
 }
+  .app form,
+  .app .controls {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+  }
+    /* Overriding input[text] elements default width */
+    /* #inputElem {width: 0} */
+
+    form #inputElem,
+    .controls #startBtn {
+      /* flex-grow: 7; */
+      width: 80%;
+    }
+    form #addBtn,
+    .controls #resetBtn {
+      /* flex-grow: 1; */
+      width: 20%;
+    }
 
 #items {
   width: 100%;
