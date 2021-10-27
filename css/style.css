@@ -194,12 +194,22 @@ button, input[type='submit'] {
   background-color: rgba(255, 255, 255, .1);
   /* max-height: 20vh; */
   max-height: 50vh;
-  margin: 5rem 20% 0 auto;
+  margin: 5rem 15% 0 auto;
   padding: 1rem;
   /* border: 1px solid red; */
-  transform: scale(.05);
+  transform: scale(0);
   transform-origin: center;
+  animation: showApp 1s forwards 10s ease-out;
 }
+  @keyframes showApp {
+    50% {
+      transform: scaleX(1);
+      transform: scaleY(.1);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+  }
   .app form,
   .app .controls {
     display: flex;

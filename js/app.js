@@ -5,6 +5,8 @@ const addBtn = app.querySelector('#addBtn');
 const startBtn = app.querySelector('#startBtn');
 const resetBtn = app.querySelector('#resetBtn');
 
+const yesBtn = document.querySelector('#yesBtn');
+
 let items = [];
 
 const addItem = (e) => {
