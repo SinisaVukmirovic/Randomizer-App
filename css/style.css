@@ -202,9 +202,9 @@ button, input[type='submit'] {
   animation: showApp 1s forwards 10s ease-out;
 }
   @keyframes showApp {
-    50% {
+    80% {
       transform: scaleX(1);
-      transform: scaleY(.1);
+      transform: scaleY(.05);
     }
     100% {
       transform: scaleY(1);
