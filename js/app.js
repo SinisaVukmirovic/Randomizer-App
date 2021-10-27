@@ -42,7 +42,7 @@ const createItemElems = (items) => {
 
 const randomSelect = () => {
     resetBtn.disabled = true;
-    const timesToHighlight = (items.length * 2) ;
+    const timesToHighlight = (items.length * 1.5) ;
 
     const interval = setInterval(() => {
         const randomItem = pickRandomItem();
