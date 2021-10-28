@@ -77,9 +77,10 @@ h1 {
   position: absolute;
   left: 10%;
   top: 35%;
-  color: #ddd;
-  font-family: sans-serif;
-  font-size: 1.25rem;
+  color: #ccc;
+  font-family: serif;
+  font-weight: bold;
+  font-size: 1.5rem;
   font-style: italic;
   opacity: 0;
   animation: fadeIn 250ms ease-in forwards 3s;
@@ -87,7 +88,7 @@ h1 {
   .speech .red {
     font-family: "Gugi", impact, sans-serif;
     color: red;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-style: normal;
   }
   .speech .delayed {
@@ -185,6 +186,8 @@ button, input[type='submit'] {
   }
 
 .app {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   position: relative;
   z-index: 111;
   display: flex;
@@ -193,7 +196,7 @@ button, input[type='submit'] {
   flex-direction: column;
   width: 50%;
   /* height: 50vh; */
-  background-color: rgba(255, 255, 255, .1);
+  background-color: rgba(255, 255, 255, .075);
   /* max-height: 20vh; */
   max-height: 45vh;
   min-height: 45vh;
@@ -205,9 +208,13 @@ button, input[type='submit'] {
   animation: showApp 1s forwards 10s ease-out;
 }
   @keyframes showApp {
+    10% {
+      /* transform: scaleX(1); */
+      transform: scaleY(.015);
+    }
     80% {
       transform: scaleX(1);
-      transform: scaleY(.03);
+      transform: scaleY(.015);
     }
     100% {
       transform: scaleY(1);
@@ -256,6 +263,7 @@ button, input[type='submit'] {
   padding: .25rem .75rem;
   margin: .25rem;
   border: 2px solid red;
+  background-color: rgba(0, 0, 0, .2);
   /* transition: transform 3s linear; */
 }
   .item.js-highlight {
