@@ -160,7 +160,7 @@ input[type='text'] {
   color: #fff;
 }
   input[type='text']::placeholder {
-    color: #ccc;
+    color: #eee;
   }
 
 button, input[type='submit'] {
@@ -205,11 +205,11 @@ button, input[type='submit'] {
   /* border: 1px solid red; */
   transform: scale(0);
   transform-origin: center;
-  animation: showApp 1s forwards 10s ease-out;
+  animation: showApp 1s forwards 10s ease-in-out;
 }
   @keyframes showApp {
-    10% {
-      /* transform: scaleX(1); */
+    1% {
+      transform: scaleX(.015);
       transform: scaleY(.015);
     }
     80% {
