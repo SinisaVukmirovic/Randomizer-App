@@ -6,8 +6,6 @@ const itemsElem = app.querySelector('#items');
 const startBtn = app.querySelector('#startBtn');
 const resetBtn = app.querySelector('#resetBtn');
 
-const speech = document.querySelector('speech');
-
 let items = [];
 
 const addItem = (e) => {
@@ -60,8 +58,10 @@ const randomSelect = () => {
 
         setTimeout(() => {
             const randomItem = pickRandomItem();
-
+            
             highlightItem(randomItem);
+            sayRandomedItem(randomItem);
+
             resetBtn.disabled = false;
         }, 150);
         
@@ -84,6 +84,18 @@ const highlightItem = (item) => {
 const unHighlightItem = (item) => {
     item.classList.remove('js-highlight');
 }
+
+const sayRandomedItem = (item) => {
+    let randomedItem = item.innerText;    
+    const speechElem = document.querySelector('.speech');
+
+    speechElem.innerHTML = `
+        <p><span class="red">Shady Figure:</span><br>
+            Randomed ${randomedItem}!
+        </p>
+    `;
+}
+
 
 const resetApp = () => {
     items = [];

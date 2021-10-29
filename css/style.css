@@ -310,3 +310,22 @@ button, input[type='submit'] {
 #resetBtn {
   background-color: #111;
 }
+
+.warning {
+  display: none;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  color: red;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .warning {
+      display: grid;
+  }
+}
