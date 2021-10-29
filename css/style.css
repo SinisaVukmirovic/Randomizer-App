@@ -14,7 +14,33 @@ body {
     background-size: cover;
     background-position: center;
     font-family: "Gugi", impact, sans-serif;
+    position: relative;
 }
+
+.intro {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 111;
+  background-color: #111;
+  opacity: 1;
+  visibility: visible;
+  animation: fadeAway 5s forwards linear;
+}
+  @keyframes fadeAway {
+    20% {
+      opacity: 1;
+    }
+    /* 80% {
+      opacity: .7;
+    } */
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
 
 h1 {
     color: #faa;
@@ -83,7 +109,7 @@ h1 {
   font-size: 1.5rem;
   font-style: italic;
   opacity: 0;
-  animation: fadeIn 250ms ease-in forwards 3s;
+  animation: fadeIn 250ms ease-in forwards 7s;
 }
   .speech .red {
     font-family: "Gugi", impact, sans-serif;
@@ -93,11 +119,11 @@ h1 {
   }
   .speech .delayed {
     opacity: 0;
-    animation: fadeIn 250ms ease-in forwards 6s;
+    animation: fadeIn 250ms ease-in forwards 10s;
   }
   .yesBtn {
     opacity: 0;
-    animation: fadeIn 250ms ease-in forwards 10s;
+    animation: fadeIn 250ms ease-in forwards 14s;
     position: absolute;
     right: 0;
     margin-top: 1rem;
@@ -157,10 +183,10 @@ input[type='text'] {
   border: 1px solid #777;
   /* background: transparent; */
   background-color: rgba(0, 0, 0, .3);
-  color: #fff;
+  color: #eee;
 }
   input[type='text']::placeholder {
-    color: #eee;
+    color: #bbb;
   }
 
 button, input[type='submit'] {
@@ -205,7 +231,7 @@ button, input[type='submit'] {
   /* border: 1px solid red; */
   transform: scaleX(0) scaleY(0);
   transform-origin: center;
-  animation: showApp 1.5s forwards 10s ease-in-out;
+  animation: showApp 1.5s forwards 15s ease-in-out;
 }
   @keyframes showApp {
     1% {

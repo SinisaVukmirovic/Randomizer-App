@@ -1,11 +1,12 @@
 const app = document.querySelector('.app');
 
-const itemsElem = app.querySelector('#items');
+
 const addBtn = app.querySelector('#addBtn');
+const itemsElem = app.querySelector('#items');
 const startBtn = app.querySelector('#startBtn');
 const resetBtn = app.querySelector('#resetBtn');
 
-const yesBtn = document.querySelector('#yesBtn');
+const speech = document.querySelector('speech');
 
 let items = [];
 
