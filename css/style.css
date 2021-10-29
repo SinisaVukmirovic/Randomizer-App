@@ -186,8 +186,8 @@ button, input[type='submit'] {
   }
 
 .app {
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  /* border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd; */
   position: relative;
   z-index: 111;
   display: flex;
@@ -203,21 +203,19 @@ button, input[type='submit'] {
   margin: 3rem 15% 0 auto;
   padding: 1rem;
   /* border: 1px solid red; */
-  transform: scale(0);
+  transform: scaleX(0) scaleY(0);
   transform-origin: center;
-  animation: showApp 1s forwards 10s ease-in-out;
+  animation: showApp 1.5s forwards 10s ease-in-out;
 }
   @keyframes showApp {
     1% {
-      transform: scaleX(.015);
-      transform: scaleY(.015);
+      transform: scaleX(.015) scaleY(.015);
     }
-    80% {
-      transform: scaleX(1);
-      transform: scaleY(.015);
+    85% {
+      transform: scaleX(1) scaleY(.015);
     }
     100% {
-      transform: scaleY(1);
+      transform: scaleX(1) scaleY(1);
     }
   }
   .app form,
