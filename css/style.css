@@ -233,15 +233,32 @@ button, input[type='submit'] {
   transform-origin: center;
   animation: showApp 1.5s forwards 15s ease-in-out;
 }
+.app::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #aaa;
+  visibility: visible;
+  animation: hideElem 200ms forwards 16s;
+}
   @keyframes showApp {
     1% {
-      transform: scaleX(.015) scaleY(.015);
+      transform: scaleX(.005) scaleY(.005);
     }
-    85% {
-      transform: scaleX(1) scaleY(.015);
+    70% {
+      transform: scaleX(1) scaleY(.005);
     }
     100% {
       transform: scaleX(1) scaleY(1);
+    }
+  }
+  @keyframes hideElem {
+    to {
+      opacity: 0;
+      visibility: hidden;
     }
   }
   .app form,
