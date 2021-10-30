@@ -86,12 +86,12 @@ const unHighlightItem = (item) => {
 }
 
 const sayRandomedItem = (item) => {
-    let randomedItem = item.innerText;    
     const speechElem = document.querySelector('.speech');
+    let randomedItem = item.innerText;    
 
     speechElem.innerHTML = `
         <p><span class="red">Shady Figure:</span><br>
-            Randomed ${randomedItem}!
+            Randomed - ${randomedItem}!
         </p>
     `;
 }
@@ -100,6 +100,10 @@ const sayRandomedItem = (item) => {
 const resetApp = () => {
     items = [];
     itemsElem.innerHTML = '';
+
+    const speechElem = document.querySelector('.speech');  
+
+    speechElem.innerHTML = '';
 }
 
 addBtn.addEventListener('click', addItem);
