@@ -1,0 +1,50 @@
+.intro {
+    position: absolute;
+    z-index: 111;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    opacity: 1;
+    visibility: visible;
+    animation: introScreen 5s forwards linear;
+}
+
+.mist {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20rem;
+    overflow: hidden;
+}
+    .mist-1 {
+        position: absolute;
+        width: 120%;
+        height: 100%;
+        left: -20%;
+        background-image: url("../assets/mist-1.png");
+        animation: mist-1 8s ease-in-out alternate-reverse infinite;
+    }
+    .mist-2 {
+        position: absolute;
+        width: 120%;
+        height: 100%;
+        right: -20%;
+        background-image: url("../assets/mist-2.png");
+        animation: mist-2 9s ease-in-out alternate-reverse infinite;
+        filter: brightness(200%);
+    }
+
+.desktop-only {
+    display: none;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    color: red;
+    font-size: 2rem;
+}

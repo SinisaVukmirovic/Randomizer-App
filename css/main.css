@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
 
 @import url('./animations.css');
+@import url('./misc-elems.css');
 
 * {
     box-sizing: border-box;
@@ -10,26 +11,13 @@
 
 body {
     min-height: 100vh;
-    background: #030408;
+    background: #222;
     overflow: hidden;
     background-image: url("../assets/bg.jpg");
     background-size: cover;
     background-position: center;
     font-family: "Gugi", impact, sans-serif;
     position: relative;
-}
-
-.intro {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 111;
-  background-color: #111;
-  opacity: 1;
-  visibility: visible;
-  animation: introScreen 5s forwards linear;
 }
   
 h1 {
@@ -56,7 +44,6 @@ h1 {
         transform: rotate(17deg);
         opacity: .8;
     }
-    
 
 .speech {
   position: absolute;
@@ -80,42 +67,6 @@ h1 {
     opacity: 0;
     animation: fadeIn 250ms ease-in forwards 10s;
   }
-  .yesBtn {
-    opacity: 0;
-    animation: fadeIn 250ms ease-in forwards 14s;
-    position: absolute;
-    right: 0;
-    margin-top: 1rem;
-    padding: .5rem 1rem;
-  }
-
-  
-
-.mist {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 20rem;
-    overflow: hidden;
-}
-    .mist-1 {
-        position: absolute;
-        width: 120%;
-        height: 100%;
-        left: -20%;
-        background-image: url("../assets/mist-1.png");
-        animation: mist-1 8s ease-in-out alternate-reverse infinite;
-    }
-    .mist-2 {
-        position: absolute;
-        width: 120%;
-        height: 100%;
-        right: -20%;
-        background-image: url("../assets/mist-2.png");
-        animation: mist-2 9s ease-in-out alternate-reverse infinite;
-        filter: brightness(200%);
-    }
-
 
 input[type='text'] {
   /* text-transform: uppercase; */
@@ -134,7 +85,7 @@ input[type='text'] {
   }
 
 button, input[type='submit'] {
-  outline: none;
+  /* outline: none; */
   /* border: none; */
   border: 1px solid #777;
 
@@ -236,35 +187,24 @@ button, input[type='submit'] {
   /* transition: transform 3s linear; */
 }
   .item.js-highlight {
+    position: relative;
+    z-index: 222;
     background-color: red;
-    animation: scalePick 2s linear forwards;
+    animation: scaleRandomed 1.5s linear forwards;
   }
-
- 
-
-/* #startBtn {
-  display: none;
-} */
 
 #resetBtn {
   background-color: #111;
 }
 
-.warning {
-  display: none;
-  place-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #222;
-  color: red;
-  font-size: 2rem;
+.js-randomized {
+    font-size: 1.5rem;
+    font-family: "Gugi", impact, sans-serif;
+    font-style: normal;
 }
 
 @media screen and (max-width: 1024px) {
-  .warning {
+  .desktop-only {
       display: grid;
   }
 }

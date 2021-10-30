@@ -93,7 +93,7 @@ const speakRandomedItem = (item) => {
 
     speechElem.innerHTML = `
         <p><span class="red">Shady Figure:</span><br>
-            Randomed - ${randomedItem}!
+            Randomed - <span class="js-randomized">${randomedItem}</span>!
         </p>
     `;
 }
