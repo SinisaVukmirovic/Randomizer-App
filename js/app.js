@@ -1,6 +1,5 @@
 const app = document.querySelector('.app');
 
-
 const addBtn = app.querySelector('#addBtn');
 const itemsElem = app.querySelector('#items');
 const startBtn = app.querySelector('#startBtn');
@@ -10,6 +9,9 @@ let items = [];
 
 const addItem = (e) => {
     e.preventDefault();
+    const speechElem = document.querySelector('.speech');  
+    speechElem.innerHTML = '';
+    
     const inputElem = document.querySelector('#inputElem');
 
     if (inputElem.value == '') return;
@@ -60,7 +62,7 @@ const randomSelect = () => {
             const randomItem = pickRandomItem();
             
             highlightItem(randomItem);
-            sayRandomedItem(randomItem);
+            speakRandomedItem(randomItem);
 
             resetBtn.disabled = false;
         }, 150);
@@ -85,7 +87,7 @@ const unHighlightItem = (item) => {
     item.classList.remove('js-highlight');
 }
 
-const sayRandomedItem = (item) => {
+const speakRandomedItem = (item) => {
     const speechElem = document.querySelector('.speech');
     let randomedItem = item.innerText;    
 
@@ -102,7 +104,6 @@ const resetApp = () => {
     itemsElem.innerHTML = '';
 
     const speechElem = document.querySelector('.speech');  
-
     speechElem.innerHTML = '';
 }
 
