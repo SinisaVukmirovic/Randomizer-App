@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
 
-@import url('./animations.css');
 @import url('./misc-elems.css');
+@import url('./animations.css');
 
 * {
     box-sizing: border-box;
@@ -183,6 +183,7 @@ button, input[type='submit'] {
   flex-wrap: wrap;
   overflow-y: auto;
   /* overflow-y: scroll; */
+  overflow-x: visible !important;
 }
 
 .item {
@@ -195,8 +196,6 @@ z-index: 2222; */
   /* transition: transform 3s linear; */
 }
   .item.js-highlight {
-    /* position: relative;
-z-index: 2222; */
     background-color: red;
     animation: scaleRandomed 1.5s linear forwards;
   }
