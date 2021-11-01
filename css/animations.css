@@ -78,11 +78,3 @@
       visibility: hidden;
     }
 }
-
-@keyframes scaleRandomed {
-    to {
-      /* position: relative;
-      z-index: 111; */
-      transform: scale(1.5);
-    }
-}

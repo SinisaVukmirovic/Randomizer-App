@@ -6,9 +6,8 @@
     --font-primary: #eee;
     --font-secondary: #bbb;
     
-    /* --base-z-ind: 1; */
     --base-delay: 7s;
-    --delayed-speech: calc(var(--base-delay) + 3)s;
-    --show-app-delay: calc(var(--base-delay) + 8)s;
-    --hide-line-delay: calc(var(--base-delay) + 9)s;
+    --delayed-speech: calc(var(--base-delay) + 3s);
+    --show-app-delay: calc(var(--base-delay) + 8s);
+    --hide-line-delay: calc(var(--base-delay) + 9s);
 }
