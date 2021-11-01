@@ -101,13 +101,14 @@ const speakRandomedItem = (item) => {
     `;
 }
 
-
 const resetApp = () => {
     items = [];
     itemsElem.innerHTML = '';
 
     const speechElem = document.querySelector('.speech');  
     speechElem.innerHTML = '';
+
+    inputElem.focus();
 }
 
 addBtn.addEventListener('click', addItem);
