@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
 
+@import url('./variables.css');
 @import url('./misc-elems.css');
 @import url('./animations.css');
 
@@ -11,7 +12,7 @@
 
 body {
     min-height: 100vh;
-    background: #222;
+    background: var(--bg-clr);
     overflow: hidden;
     background-image: url("../assets/bg.jpg");
     background-size: cover;
@@ -21,12 +22,12 @@ body {
 }
   
 h1 {
-    color: #faa;
+    color: #FAA;
     text-shadow: 0 -40px 100px, 
-                 0 0 2px, 0 0 1em red, 
-                 0 0 .5em red, 
-                 0 0 .1em red, 
-                 0 10px 3px #000;
+                 0 0 2px, 0 0 1em var(--theme-clr), 
+                 0 0 .5em var(--theme-clr), 
+                 0 0 .1em var(--theme-clr), 
+                 0 10px 3px var(--bg-clr);
     text-align: center;
     text-transform: uppercase;
     font-size: 7rem;
@@ -42,24 +43,24 @@ h1 {
         display: inline-block;
         bottom: -1.5rem;
         transform: rotate(17deg);
-        opacity: .8;
+        opacity: .7;
     }
 
 .speech {
   position: absolute;
   left: 10%;
   top: 35%;
-  color: #ccc;
+  color: var(--font-primary);
   font-family: serif;
   font-weight: bold;
   font-size: 1.5rem;
   font-style: italic;
   opacity: 0;
-  animation: fadeIn 250ms ease-in forwards 7s;
+  animation: fadeIn 250ms ease-in forwards var(--base-delay);
 }
   .speech .red {
     font-family: "Gugi", impact, sans-serif;
-    color: red;
+    color: var(--theme-clr);
     font-size: 1.25rem;
     font-style: normal;
   }
@@ -79,24 +80,24 @@ input[type='text'] {
   font-size: 1rem;
   padding: .5rem;
   margin: .5rem .25rem;  
-  /* border: 1px solid #aaa; */
+  /* border: 1px solid var(--secondary-clr); */
   outline: none;
-  border: 1px solid #777;
+  border: 1px solid var(--primary-clr);
   /* background: transparent; */
   background-color: rgba(0, 0, 0, .3);
-  color: #eee;
+  color: var(--font-primary);
 }
   input[type='text']::placeholder {
-    color: #bbb;
+    color: var(--font-secondary);
   }
 
 button, input[type='submit'] {
   /* outline: none; */
   /* border: none; */
-  border: 1px solid #777;
+  border: 1px solid var(--primary-clr);
 
-  background-color: red;
-  color: #eee;
+  background-color: var(--theme-clr);
+  color: var(--font-primary);
   font-weight: bold;
   padding: .5rem 0;
   margin: .5rem .25rem;
@@ -116,7 +117,7 @@ button, input[type='submit'] {
   /* border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd; */
   position: relative;
-  z-index: 111;
+  /* z-index: 111; */
   display: flex;
   justify-content: space-between;
   align-items: space-between;
@@ -126,10 +127,10 @@ button, input[type='submit'] {
   background-color: rgba(255, 255, 255, .075);
   /* max-height: 20vh; */
   max-height: 50vh;
-  min-height: 30vh;
+  min-height: 35vh;
   margin: 3rem 15% 0 auto;
   padding: 1rem;
-  /* border: 1px solid red; */
+  /* border: 1px solid var(--theme-clr); */
   transform: scaleX(0) scaleY(0);
   transform-origin: center;
   animation: showApp 1.5s forwards 15s ease-in-out;
@@ -141,7 +142,7 @@ button, input[type='submit'] {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #aaa;
+  background-color: var(--secondary-clr);
   visibility: visible;
   animation: hideElem 200ms forwards 16s;
 }
@@ -172,7 +173,7 @@ button, input[type='submit'] {
   max-height: 50rem;
   font-family: "Gugi", impact, sans-serif;
   font-size: 1.25rem;
-  color: #fff;
+  color: var(--font-primary);
   text-transform: capitalize;
   /* border: 1px solid #fff; */
   margin: 1rem 0;
@@ -181,7 +182,8 @@ button, input[type='submit'] {
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  overflow-y: auto;
+  /* overflow-y: auto; */
+  overflow: auto;
   /* overflow-y: scroll; */
   /* overflow-x: visible !important; */
   /* overflow: visible; */
@@ -189,32 +191,32 @@ button, input[type='submit'] {
 }
 
 .item {
-    /* position: relative;
-z-index: 2222; */
   padding: .25rem .75rem;
   margin: .25rem;
-  border: 2px solid red;
+  border: 2px solid var(--theme-clr);
   background-color: rgba(0, 0, 0, .2);
   /* transition: transform 3s linear; */
 }
   .item.js-highlight {
-    background-color: red;
+    /* position: relative;
+z-index: 222; */
+    background-color: var(--theme-clr);
     animation: scaleRandomed 1.5s forwards linear;
   }
 
 #resetBtn {
-  background-color: #111;
+  background-color: var(--bg-clr);
 }
 
 ::-webkit-scrollbar {
   width: 4px;
   /* border: solid 1px #999; */
-  background: #777;
+  background: var(--primary-clr);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: red;
+  background: var(--theme-clr);
 }
 
 /* Handle on hover */

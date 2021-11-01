@@ -82,7 +82,7 @@
 @keyframes scaleRandomed {
     to {
       /* position: relative;
-      z-index: 1111; */
-      transform: scale(1.75);
+      z-index: 111; */
+      transform: scale(1.5);
     }
 }
