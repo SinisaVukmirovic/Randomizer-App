@@ -65,6 +65,9 @@ const randomSelect = () => {
             speakRandomedItem(randomItem);
 
             resetBtn.disabled = false;
+
+            const inputElem = document.querySelector('#inputElem');
+            inputElem.focus();
         }, 150);
         
 
