@@ -196,8 +196,37 @@ input[type='submit'] {
   background: firebrick; 
 }
 
-@media screen and (max-width: 1023px) {
-  .desktop-only {
-      display: grid;
-  }
+/* media queries */
+@media (max-width: 1366px) {
+    html {
+        font-size: 14px;
+    }
+    body {
+        background-position: left center;
+    }
+}
+@media (max-width: 1024px) {
+    html {
+        font-size: 12px;
+    }
+    body {
+        background-position: left center;
+    }
+}
+@media (max-width: 823px) {
+    .desktop-only {
+        display: grid;
+    }
+}
+
+/* landscape mode */
+@media (min-height: 1366px) {
+    .desktop-only {
+        display: grid;
+    }
+}
+@media (min-height: 1025px) {
+    .desktop-only {
+        display: grid;
+    }
 }

@@ -44,13 +44,15 @@
 @keyframes mist-1 {
     to {
         left: 0;
-        filter: brightness(150%);
+        opacity: 1;
+        /* filter: brightness(150%); */
     }
 }
 @keyframes mist-2 {
     to {
         right: 0;
-        filter: brightness(100%);
+        opacity: .7;
+        /* filter: brightness(100%); */
     }
 }
     
