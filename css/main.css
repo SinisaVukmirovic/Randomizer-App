@@ -212,10 +212,16 @@ input[type='submit'] {
     body {
         background-position: left center;
     }
+    body > :not(.desktop-only) {
+        display: none;
+    }
 }
 @media (max-width: 823px) {
     .desktop-only {
         display: grid;
+    }
+    body > :not(.desktop-only) {
+        display: none;
     }
 }
 
